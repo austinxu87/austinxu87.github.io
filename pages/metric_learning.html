@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Simultaneous Preference and Metric Learning from Paired Comparisons</title>
+
+    <link rel="stylesheet" href="../stylesheets/styles_pages.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <section>
+        <h1><a href="https://papers.nips.cc/paper/2020/file/0561bc7ecba98e39ca7994f93311ba23-Paper.pdf">Simultaneous Preference and Metric Learning from Paired Comparisons.</a></h1>
+        <p>Presented as a Spotlight Presentation at NeurIPS 2020 [<a href="https://crossminds.ai/video/simultaneous-preference-and-metric-learning-from-paired-comparisons-606fed0cf43a7f2f827c1217/">talk</a>]</p>
+
+        <p>The ideal point model for human preference posits that a user's preference for an item (e.g., shoes, TV shows, etc.) can be represented as a point in some space with a set of items. The closer an item
+        is to the user's preference point, called the user's <i>ideal point</i>, the more preferred that item is. The distance under which this "close-ness" is measured is key to understanding how the user
+        makes their preference judgements. </p>
+
+        <p>The most common choice for distance metric under this model is the Euclidean distance, which considers each item feature idependently, and assigns each feature equal weight in the preference judgment.
+        These facts are overly restrictive, as humans often consider combinations of features, and prioritize said combinations differently. One way to model this is with a <i>Mahalanobis metric</i>, which
+        parametrizes the Euclidean metric with a symmetric positive semidefinite matrix.</p>
+        <br>
+        <center><img src="../figures/IdealPoint.png" alt="Estimation of an ideal point with paired comparisons"
+          width="600"
+          height=auto
+          ></center>
+        <br>
+        <p>We pose the following question: Using paired comparison queries of the form "do you prefer item A or B?", can we estimate <b>both</b> the user's ideal point <b>and</b> the metric?
+          Each paired comparison response reveals which item is closer to the ideal point, which translates to a halfspace where the ideal point lies. Given enough halfspaces, we can localize the ideal point,
+          as shown above. We propose a simple two-step estimation procedure where we first estimate the metric via semidefinite program, then, with this estimate for the metric in hand, learn the ideal point.</p>
+
+        <p>Check out our paper, or the Spotlight Presentation below for more details.</p>
+        
+        <iframe src="//player.crossminds.ai/index.html?vid=606fed0cf43a7f2f827c1217&utm_medium=share&utm_source=embed" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+      </section>
+
+
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
