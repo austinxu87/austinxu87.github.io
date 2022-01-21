@@ -1,0 +1,7 @@
+@article{xu2020simultaneous,
+  title={Simultaneous Preference and Metric Learning from Paired Comparisons},
+  author={Xu, Austin and Davenport, Mark},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  year={2020}
+}
